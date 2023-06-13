@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.models.Categoria;
 import org.example.models.Producto;
 import org.example.repositorio.ProductoRepositorioImpl;
 import org.example.repositorio.Repositorio;
@@ -24,6 +25,9 @@ public class EjemploJDBC {
             producto.setNombre("Teclado mecanico");
             producto.setPrecio(500);
             producto.setFechaRegistro(new Date());
+            Categoria categoria = new Categoria();
+            categoria.setId(3L);
+            producto.setCategoria(categoria);
             repositorio.guardar(producto);
             System.out.println("Producto guardado con exito");
             repositorio.listar().forEach(System.out::println);
