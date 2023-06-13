@@ -5,10 +5,11 @@ import org.example.repositorio.ProductoRepositorioImpl;
 import org.example.repositorio.Repositorio;
 import org.example.util.ConexionBaseDatos;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Date;
 
-public class EjemploJDBC {
+public class EjemploJDBCActualizar {
     public static void main(String[] args) {
 
         try (Connection conn = ConexionBaseDatos.getInstance();){ //se encarga de administrar las conexiones y drivers que tenemos disponibles
