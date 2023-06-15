@@ -20,7 +20,7 @@ public class EjemploJDBCDelete {
             System.out.println(repositorio.porId(2L));
 
             System.out.println("======= insertar nuevo producto =======");
-            repositorio.eliminar(6L);
+            repositorio.eliminar(22L);
             repositorio.listar().forEach(System.out::println);
 
         } catch (SQLException e) {
